@@ -6,7 +6,7 @@ A django model property decorator for caching the data returned by the decorated
 
 ## sample usage
 
-```
+```python
 from django.db import models
 
 from cache_property import cache_property
