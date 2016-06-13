@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Cache Property</title>
+    </head>
+    <body>
+        <h1>total profile: {{ total_profile }}</h1>
+        <h2>Without Cache</h2>
+        {% for res in noncached_results %}
+            <p>{{ res.0 }} has {{ res.1 }} project(s) </p>
+        {% endfor %}
+        <p>total queries without caching: {{ total_queries_without_caching }}</p>
+
+        <br/>
+        <br/>
+        <h2>With Cache</h2>
+        {% for res in cached_results %}
+            <p>{{ res.0 }} has {{ res.1 }} project(s) </p>
+        {% endfor %}
+        <p>total queries without caching: {{ total_queries_with_caching }}</p>
+    </body>
+</html>
